@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add Question</title>
+  </head>
+  <body>
+    <form action="{% url 'addques' %}" method="POST">
+        {% csrf_token %}
+        <input name="name" type="text" placeholder="Question Name">
+        <textarea name="statement" placeholder="Question Statement"></textarea>
+        <textarea name="sample_testcase" placeholder="Sample Testcase"></textarea>
+        <textarea name="sample_answer" placeholder="Sample Answer"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
